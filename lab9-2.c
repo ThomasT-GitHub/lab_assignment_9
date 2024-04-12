@@ -76,7 +76,7 @@ void displayRecordsInHash(struct HashType *pHashArray, int hashSz) {
       char *name;
       strcpy(name, &pHashArray[i].r->name);
       int order = pHashArray[i].r->order;
-      printf("index x -> %d, %s, %d, %d\n", id, name, order, hash(id));
+      printf("index x -> %d, %s, %d\n", id, name, order);
 
       // Prints all the records in the bucket
       if (pHashArray[i].next != NULL) {
@@ -91,7 +91,7 @@ void displayRecordsInHash(struct HashType *pHashArray, int hashSz) {
           char *name;
           strcpy(name, &t->r->name);
           int order = t->r->order;
-          printf("index x -> %d, %s, %d, %d\n", id, name, order, hash(id));
+          printf("index x -> %d, %s, %d\n", id, name, order);
         }
       }
     }
